@@ -1,12 +1,17 @@
 ```markdown
-Automated Invoice Generator (Python Script)
-├── invoice_generator.py (Main script with invoice generation logic)
-├── config.json (Configuration file for custom settings like invoice format)
-├── templates
-│ └── invoice_template.html (or .pdf, .docx, etc., Template for invoice layout)
+Automated Invoice Generator
 ├── data
-│ └── items_data.csv (Data file with item details and prices)
-└── README.md (Instructions and documentation)
+│ └── items_data.csv # Data file with item details and prices
+├── templates
+│ └── invoice_template.html # Template for invoice layout
+├── venv # Virtual environment directory
+│ ├── bin
+│ ├── lib
+│ └── (other virtualenv files)
+├── .gitignore # List of files to be ignored by git
+├── README.md # Instructions and documentation
+├── config.json # Configuration file for custom settings
+└── invoice_generator.py # Main script with invoice generation logic
 ```
 
 # Automated Invoice Generator
