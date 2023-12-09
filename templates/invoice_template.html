@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Invoice</title>
+  </head>
+  <body>
+    <h1>{{ company_name }}</h1>
+    <p>{{ company_address }}</p>
+
+    <h2>Invoice #{{ invoice_number }}</h2>
+    <p>Date: {{ invoice_date }}</p>
+
+    <h3>Billed To:</h3>
+    <p>{{ customer_name }}</p>
+    <p>{{ customer_address }}</p>
+
+    <h3>Items:</h3>
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Unit Price</th>
+        <th>Discount</th>
+        <th>Total</th>
+      </tr>
+      {% for item in items %}
+      <tr>
+        <td>{{ item['Item Name'] }}</td>
+        <td>{{ item['Quantity'] }}</td>
+        <td>${{ item['Unit Price'] }}</td>
+        <td>${{ item['Discount'] }}</td>
+        <td>${{ item['Total'] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <p>Subtotal: ${{ subtotal }}</p>
+    <p>Tax: ${{ tax }}</p>
+    <p>Total: ${{ total }}</p>
+
+    <p>Terms: Payment due in 30 days</p>
+  </body>
+</html>
